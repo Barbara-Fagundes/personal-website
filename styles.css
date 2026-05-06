@@ -42,7 +42,7 @@ body[data-mode="industry"] {
 .page-shell {
   width: min(1160px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 1.25rem 0 4rem;
+  padding: 1.5rem 0 4rem;
 }
 
 .site-header,
@@ -55,11 +55,8 @@ body[data-mode="industry"] {
 }
 
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: flex-start;
-  margin-bottom: 2rem;
+  display: block;
+  margin-bottom: 1.1rem;
 }
 
 .eyebrow,
@@ -113,23 +110,73 @@ button {
   padding-top: 0.7rem;
 }
 
+.tab-nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 0.9rem;
+  background: rgba(255, 250, 242, 0.74);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.tab-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.tab-link:hover,
+.tab-link:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.tab-link.is-active {
+  background: var(--accent);
+  color: #fffaf5;
+}
+
+.page-main {
+  display: grid;
+  gap: 2rem;
+}
+
+.page-section {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.section-heading {
+  max-width: 56ch;
+}
+
 .top-nav a,
+.tab-link,
 .contact-links a {
   color: var(--ink);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
 }
 
 .top-nav a:hover,
 .contact-links a:hover {
-  border-color: currentColor;
+  border-bottom: 1px solid currentColor;
 }
 
 .hero {
   display: grid;
   grid-template-columns: 1.3fr 0.8fr;
-  gap: 1.2rem;
-  margin-bottom: 1.2rem;
+  gap: 1.4rem;
+  margin-bottom: 0;
 }
 
 .hero,
@@ -149,7 +196,7 @@ button {
 .profile-card,
 .timeline-body,
 .contact-section {
-  padding: 1.5rem;
+  padding: 1.7rem;
 }
 
 .lead {
@@ -215,9 +262,32 @@ button {
 
 .content-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 1.2rem;
-  margin-bottom: 1.2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.balanced-grid {
+  align-items: stretch;
+}
+
+.cards-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.cards-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.stacked-feature {
+  grid-template-columns: 1.3fr 0.7fr;
+}
+
+.static-card {
+  opacity: 1;
 }
 
 .card-wide {
@@ -236,8 +306,8 @@ button {
 
 .profile-panels {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
 }
 
 .profile-card {
@@ -277,7 +347,7 @@ button {
 }
 
 .contact-section {
-  margin-top: 2.2rem;
+  margin-top: 0;
 }
 
 .contact-links {
@@ -291,17 +361,16 @@ button {
   .site-header,
   .hero,
   .content-grid,
+  .cards-two,
+  .cards-three,
   .profile-panels,
-  .timeline-item {
+  .timeline-item,
+  .stacked-feature {
     grid-template-columns: 1fr;
   }
 
   .site-header {
     display: grid;
-  }
-
-  .top-nav {
-    justify-content: flex-start;
   }
 
   h1 {
