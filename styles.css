@@ -64,6 +64,7 @@ body[data-mode="industry"] {
   border: 1px solid var(--line);
   border-radius: 36px;
   box-shadow: var(--shadow);
+  text-align: center;
 }
 
 .brand {
@@ -71,16 +72,21 @@ body[data-mode="industry"] {
   margin: 0 auto;
 }
 
-.brand-left {
-  max-width: none;
-  margin: 0;
+.brand-home {
+  max-width: 980px;
+  margin-bottom: 1.5rem;
 }
 
-.split-hero {
+.header-split {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
-  gap: 1.8rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, 360px);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.intro-panel {
+  text-align: left;
+  padding: 0.4rem 0.2rem 0 0.2rem;
 }
 
 .header-panel {
@@ -121,16 +127,11 @@ h3 {
 h1 {
   width: auto;
   max-width: none;
-  margin: 0;
-  font-size: clamp(3rem, 6.6vw, 5.4rem);
-  line-height: 1.04;
+  margin: 0 auto;
+  font-size: clamp(3.15rem, 6.2vw, 5.6rem);
+  line-height: 1.02;
   letter-spacing: -0.02em;
   text-wrap: pretty;
-}
-
-.split-hero h1 {
-  width: 100%;
-  max-width: 760px;
 }
 
 h2 {
@@ -269,8 +270,8 @@ button {
   margin: 1rem 0 0;
 }
 
-.site-header .lead {
-  text-align: left;
+.brand-home .lead {
+  margin-top: 0;
 }
 
 .hero-panel {
@@ -445,7 +446,7 @@ button {
   .profile-panels,
   .timeline-item,
   .stacked-feature,
-  .split-hero {
+  .header-split {
     grid-template-columns: 1fr;
   }
 
@@ -466,6 +467,7 @@ button {
     margin-top: -0.6rem;
   }
 
+  .intro-panel,
   .site-header .lead {
     text-align: left;
   }
