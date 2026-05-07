@@ -67,7 +67,7 @@ body[data-mode="industry"] {
 }
 
 .brand {
-  max-width: 880px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
@@ -119,13 +119,18 @@ h3 {
 }
 
 h1 {
-  width: 100%;
-  max-width: 760px;
+  width: auto;
+  max-width: none;
   margin: 0;
   font-size: clamp(3rem, 6.6vw, 5.4rem);
   line-height: 1.04;
   letter-spacing: -0.02em;
   text-wrap: pretty;
+}
+
+.split-hero h1 {
+  width: 100%;
+  max-width: 760px;
 }
 
 h2 {
