@@ -1,232 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbara Fagundes | Home</title>
-    <meta
-      name="description"
-      content="Barbara Fagundes is a postdoctoral researcher and learning designer working across engineering education, AI literacy, instructional design, and learning research."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="brand brand-home">
-          <p class="eyebrow">Barbara Fagundes, Ph.D.</p>
-          <h1>Learning, AI literacy, and education research translated into practical support</h1>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbara Fagundes</title>
+  <meta name="description" content="Barbara Fagundes academic profile, research, teaching, and instructional design portfolio." />
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #171717;
+      --muted: #666;
+      --line: #e6e6e6;
+      --link: #235789;
+      --max: 760px;
+    }
 
-        <div class="header-split">
-          <div class="intro-panel">
-            <p class="lead">
-              I work across higher education, K-12, and professional learning, with a
-              focus on how people learn with technology and how institutions can support
-              thoughtful AI adoption.
-            </p>
-          </div>
+    * {
+      box-sizing: border-box;
+    }
 
-          <aside class="header-panel">
-            <p class="panel-label">Current Focus</p>
-            <p class="panel-title">Research-to-practice bridge across higher education, K-12, and AI literacy</p>
-            <ul class="quick-points">
-              <li>Generative AI adoption in education</li>
-              <li>K-2 and pre-college computational thinking</li>
-              <li>Faculty development and educator support</li>
-            </ul>
-          </aside>
-        </div>
-      </header>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
 
-      <nav class="tab-nav" aria-label="Primary">
-        <a class="tab-link is-active" href="index.html">Home</a>
-        <a class="tab-link" href="academic.html">Academic</a>
-        <a class="tab-link" href="industry.html">Industry</a>
-        <a class="tab-link" href="paypal.html">Learning &amp; Enablement</a>
-        <a class="tab-link" href="openai.html">AI Learning Research</a>
-        <a class="tab-link" href="publications.html">Publications</a>
-        <a class="tab-link" href="selected-work.html">Selected Work</a>
-      </nav>
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4rem 1.25rem;
+    }
 
-      <main class="page-main">
-        <section class="hero hero-home">
-          <div class="hero-copy">
-            <p class="kicker">Overview</p>
-            <h2>One website, multiple job-search directions, one coherent throughline</h2>
-            <p>
-              My niche sits at the intersection of engineering education, AI in
-              learning, instructional design, and research-to-practice translation.
-              Across all of those areas, I care about helping people build clarity,
-              confidence, and good judgment when using complex tools.
-            </p>
-            <div class="action-row">
-              <a class="button-link" href="Barbara_Fagundes_CV.pdf" target="_blank" rel="noreferrer">
-                Download CV
-              </a>
-              <a class="button-link button-link-secondary" href="publications.html">
-                View Publications
-              </a>
-            </div>
-          </div>
-          <aside class="hero-panel">
-            <p class="panel-label">Why This Site</p>
-            <p class="panel-title">A single professional identity that still adapts to different audiences</p>
-            <ul class="quick-points">
-              <li>Academic profile</li>
-              <li>Learning and enablement profile</li>
-              <li>AI learning research profile</li>
-            </ul>
-          </aside>
-        </section>
+    header {
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
 
-        <section class="page-section">
-          <div class="content-grid intro-grid">
-            <article class="headshot-card">
-              <img class="headshot" src="headshot.png" alt="Portrait of Barbara Fagundes" />
-            </article>
+    .profile-block {
+      display: grid;
+      gap: 0.8rem;
+      justify-items: center;
+    }
 
-            <article class="card">
-              <p class="section-tag">About Me</p>
-              <h2>Researcher, designer, and educator working across AI literacy and learning</h2>
-              <p>
-                My background connects engineering education, computational thinking,
-                instructional design, and AI in education. I am especially interested
-                in how research can inform better teaching, better training, and more
-                thoughtful use of AI across higher education and K-12 settings.
-              </p>
-              <p>
-                I bring experience from research labs, faculty partnerships, online
-                learning design, classroom teaching, and direct user support. That mix
-                helps me move comfortably between scholarship, implementation, and
-                communication with different audiences.
-              </p>
-            </article>
-          </div>
-        </section>
+    .profile-picture {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: #eee;
+    }
 
-        <section class="page-section">
-          <div class="section-heading">
-            <p class="section-tag">Explore</p>
-            <h2>Choose the path that matches the audience</h2>
-          </div>
-          <div class="cards-three">
-            <article class="profile-card static-card">
-              <p class="profile-label">Academic</p>
-              <h3>Teaching, mentorship, and engineering education</h3>
-              <p>
-                For faculty roles, postdoctoral work, research statements, and
-                academic collaborations.
-              </p>
-              <ul class="detail-list">
-                <li>Engineering education and student learning</li>
-                <li>Generative AI in computing education</li>
-                <li>K-12 to higher education research trajectory</li>
-              </ul>
-              <p><a href="academic.html">Open academic page</a></p>
-            </article>
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.45rem;
+      width: 100%;
+      margin-top: 0;
+    }
 
-            <article class="profile-card static-card">
-              <p class="profile-label">Learning &amp; Enablement</p>
-              <h3>Curriculum, training, adoption, and stakeholder support</h3>
-              <p>
-                For learning program, enablement, curriculum, and instructional design
-                roles in organizations.
-              </p>
-              <ul class="detail-list">
-                <li>End-to-end learning design</li>
-                <li>Training programs and digital assets</li>
-                <li>Adoption support and evaluation</li>
-              </ul>
-              <p><a href="paypal.html">Open learning and enablement page</a></p>
-            </article>
+    .profile-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.15rem;
+      height: 2.15rem;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--muted);
+      background: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1;
+    }
 
-            <article class="profile-card static-card">
-              <p class="profile-label">AI Learning Research</p>
-              <h3>Reasoning, behavior, and cognitive outcomes with AI</h3>
-              <p>
-                For research scientist and learning science roles focused on human-AI
-                interaction and learning processes.
-              </p>
-              <ul class="detail-list">
-                <li>Qualitative and mixed-methods research</li>
-                <li>Student reasoning and help-seeking</li>
-                <li>AI literacy across educational settings</li>
-              </ul>
-              <p><a href="openai.html">Open AI learning research page</a></p>
-            </article>
-          </div>
-        </section>
+    .profile-links a:hover {
+      color: white;
+      background: var(--link);
+      border-color: var(--link);
+      text-decoration: none;
+    }
 
-        <section class="page-section">
-          <div class="content-grid balanced-grid">
-            <article class="card">
-              <p class="section-tag">Background</p>
-              <h2>What anchors my work</h2>
-              <ul class="detail-list">
-                <li>Ph.D. in Engineering Education, Purdue University</li>
-                <li>M.S. in Computer Science, Jackson State University</li>
-                <li>B.A. in Early Childhood Education, Universidade Sant'anna</li>
-                <li>Experience across teaching, research, e-learning, and user support</li>
-              </ul>
-            </article>
+    .profile-links .cv-button {
+      width: 2.7rem;
+      border-radius: 999px;
+      background: var(--link);
+      border-color: var(--link);
+      color: white;
+    }
 
-            <article class="card">
-              <p class="section-tag">Niche</p>
-              <h2>Higher education supporting K-12 AI literacy</h2>
-              <p>
-                A strong throughline in my work is how higher education can help K-12
-                systems approach AI literacy thoughtfully through research,
-                professional learning, curriculum support, and responsible
-                implementation guidance.
-              </p>
-            </article>
-          </div>
-        </section>
+    @media (max-width: 600px) {
+      header {
+        grid-template-columns: 1fr;
+      }
 
-        <section class="page-section">
-          <div class="content-grid balanced-grid">
-            <article class="card">
-              <p class="section-tag">Selected Themes</p>
-              <h2>Core areas</h2>
-              <ul class="detail-list">
-                <li>AI in education and AI literacy</li>
-                <li>Computational thinking from K-2 to higher education</li>
-                <li>Student learning in design-centered environments</li>
-                <li>Faculty development and teaching innovation</li>
-              </ul>
-            </article>
+      .profile-picture {
+        width: 120px;
+        height: 120px;
+      }
 
-            <article class="card">
-              <p class="section-tag">Next Steps</p>
-              <h2>Explore materials and profiles</h2>
-              <div class="resource-links">
-                <a href="Barbara_Fagundes_CV.pdf" target="_blank" rel="noreferrer">Full CV</a>
-                <a href="publications.html">Publications and presentations</a>
-                <a href="selected-work.html">Selected work and case studies</a>
-              </div>
-              <div class="contact-links">
-                <a href="mailto:bfagundes@purdue.edu">bfagundes@purdue.edu</a>
-                <a href="https://www.linkedin.com/in/iambarbaraf/" target="_blank" rel="noreferrer">
-                  LinkedIn
-                </a>
-                <a href="https://www.researchgate.net/profile/Barbara-Fagundes-2" target="_blank" rel="noreferrer">
-                  ResearchGate
-                </a>
-              </div>
-              <p class="contact-note">
-                Languages: Portuguese (native), English (fluent), Spanish (basic).
-              </p>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
-  </body>
+      .profile-block {
+        justify-items: start;
+      }
+
+      .profile-links {
+        max-width: 140px;
+        justify-content: start;
+      }
+    }
+
+    h1 {
+      margin: 0 0 0.4rem;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.4rem;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.65rem;
+    }
+
+    .item-title {
+      font-weight: 700;
+    }
+
+    .meta {
+      color: var(--muted);
+    }
+
+    footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="profile-block">
+        <img class="profile-picture" src="assets/headshot.png" alt="Portrait of Barbara Fagundes" />
+        <nav aria-label="Profile links" class="profile-links">
+          <a class="cv-button" href="files/bfagundes_CV_June_2026.pdf" aria-label="CV" title="CV">CV</a>
+          <a href="mailto:iambarbaraf@gmail.com" aria-label="Email" title="Email"><img src="assets/icons8-email-50.png" alt="Email" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+          <a href="https://scholar.google.com/citations?user=XupPbTIAAAAJ&hl=en&oi=ao" aria-label="Google Scholar" title="Google Scholar"><img src="assets/icons8-google-scholar-50.png" alt="Google Scholar" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+          <a href="https://github.com/Barbara-Fagundes" aria-label="GitHub" title="GitHub"><img src="assets/icons8-github-50.png" alt="GitHub" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+          <a href="https://www.linkedin.com/in/iambarbaraf" aria-label="LinkedIn" title="LinkedIn"><img src="assets/icons8-linkedin-50.png" alt="LinkedIn" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+        </nav>
+      </div>
+      <div>
+        <h1>Barbara Fagundes</h1>
+        <p class="subtitle">Postdoctoral Researcher · AI and Computing Education · Engineering Education Research</p>
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="industry.html">Industry</a>
+          <a href="publications.html">Publications</a>
+          <a href="instructional-design.html">Instructional Design Portfolio</a>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        I am a postdoctoral researcher in Engineering Education with interdisciplinary expertise in computer science, early childhood education, STEM learning, faculty development, and instructional innovation. My work focuses on strengthening the computing education pipeline through research on early computational thinking, undergraduate STEM engagement and persistence, and responsible integration of generative AI in computing and engineering education.
+      </p>
+      <p>
+        I use qualitative and mixed-methods approaches, including interviews, focus groups, classroom video analysis, thematic analysis, and survey design, to study how instructional environments and emerging technologies shape learning.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research interests</h2>
+      <ul>
+        <li>AI in education and emerging technologies for learning</li>
+        <li>Computing education and computational thinking across K-16</li>
+        <li>Undergraduate STEM engagement, autonomy, and persistence</li>
+        <li>Engineering education research and STEM learning</li>
+        <li>Faculty development, student-faculty partnerships, and evidence-based teaching</li>
+        <li>Curriculum design, assessment, evaluation, and instructional improvement</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <span class="item-title">Ph.D. in Engineering Education.</span>
+          <span class="meta">Purdue University, Winter 2024. Advisor: Dr. Tamara J. Moore.</span>
+        </li>
+        <li>
+          <span class="item-title">M.S. in Computer Science.</span>
+          <span class="meta">Jackson State University, Spring 2017.</span>
+        </li>
+        <li>
+          <span class="item-title">B.A. in Early Childhood Education.</span>
+          <span class="meta">Universidade Sant’Anna, Summer 2010. Minors: K-5 education, policy, and school administration.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Research and projects</h2>
+      <ul>
+        <li>
+          <span class="item-title">Generative AI in undergraduate computing and engineering courses.</span>
+          Qualitative research on students’ responsible use of AI tools, learning processes, ethical considerations, tool limitations, and instructional implications.
+        </li>
+        <li>
+          <span class="item-title">Student Pedagogy Advocates.</span>
+          Student-faculty partnership work supporting evidence-based teaching, undergraduate mentoring, and research-to-practice initiatives.
+        </li>
+        <li>
+          <span class="item-title">Rethinking Circle Time.</span>
+          NSF-funded research integrating computational thinking into K-2 literacy through programming lessons, classroom video analysis, teacher-facing materials, and survey design.
+        </li>
+        <li>
+          <span class="item-title">Pre-college engineering education research.</span>
+          Classroom-based video data collection, curriculum implementation support, and analysis of engineering design learning in K-12 settings.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Teaching and instructional design</h2>
+      <ul>
+        <li>
+          <span class="item-title">Teaching Engineering Online.</span>
+          Co-developed graduate course modules, scripts, and instructional slides for online and blended engineering education.
+        </li>
+        <li>
+          <span class="item-title">CISTAR NSF Engineering Research Center.</span>
+          Designed e-learning modules, video-based instructional supports, teacher-facing lessons, and middle school engineering curriculum materials.
+        </li>
+        <li>
+          <span class="item-title">First-Year Engineering Courses.</span>
+          Supported required Purdue engineering courses serving approximately 240 students per semester; mentored student teams, supported Excel and MATLAB work, and gave feedback on technical communication.
+        </li>
+        <li>
+          <span class="item-title">Early childhood and elementary teaching.</span>
+          Designed and delivered interdisciplinary lessons in literacy, mathematics, science, geography, and history in public and private schools in São Paulo, Brazil.
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Barbara Fagundes. Hosted on GitHub Pages.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

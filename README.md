@@ -1,34 +1,20 @@
-# Barbara Fagundes Personal Site
+# Barbara Fagundes Academic Profile
 
-This is a simple static personal website designed to work directly with GitHub Pages.
+A simple GitHub Pages academic profile website.
 
-## What is included
+## Files
 
-- `index.html`: the main page
-- `styles.css`: visual design and responsive layout
-- `script.js`: audience switcher for hybrid, academic, and industry views
+- `index.html` — homepage
+- `industry.html` — industry-facing profile page
+- `publications.html` — selected publications
+- `instructional-design.html` — instructional design portfolio
+- `files/bfagundes_CV_June_2026.pdf` — CV
+- `assets/profile.jpg` — add a profile photo with this filename
 
 ## How to publish on GitHub Pages
 
-1. Create a GitHub repository.
-2. Upload these files to the repository root.
-3. In GitHub, open `Settings` -> `Pages`.
-4. Under `Build and deployment`, choose `Deploy from a branch`.
-5. Select your main branch and the `/ (root)` folder.
-6. Save, then wait for GitHub Pages to publish the site.
-
-## Current page structure
-
-- `index.html`: shared homepage
-- `academic.html`: academic profile
-- `industry.html`: overview of industry-facing directions
-- `paypal.html`: learning, curriculum, and enablement page
-- `openai.html`: AI learning and cognitive outcomes research page
-
-## Good next additions
-
-- Add a headshot
-- Add a downloadable CV link
-- Add publications, presentations, or selected projects
-- Add a dedicated publications page fed directly from the CV
-- Add featured projects or case studies for each track
+1. Create a repository named `YOUR-USERNAME.github.io`.
+2. Upload these files and folders to the repository root.
+3. Add a profile image at `assets/profile.jpg`.
+4. Commit and push.
+5. Visit `https://YOUR-USERNAME.github.io`.
