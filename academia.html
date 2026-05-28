@@ -21,10 +21,7 @@
     nav { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.4rem; font-size: 0.95rem; }
     nav[aria-label="Main navigation"] a { padding: 0.28rem 0.62rem; border: 1px solid transparent; border-radius: 999px; }
     nav[aria-label="Main navigation"] a[aria-current="page"] { color: var(--link); background: #eef5fb; border-color: #cfe0ee; text-decoration: none; }
-    .headline-block { position: relative; padding-right: 7rem; }
-    .headline-block .language-switch { position: absolute; top: 0; right: 0; display: inline-flex; align-items: center; gap: 0.18rem; margin: 0; padding-left: 0.6rem; }
-    .headline-block .language-switch a { padding: 0.36rem 0.55rem; border: 1px solid transparent; border-radius: 999px; line-height: 1; }
-    .headline-block .language-switch a[aria-current="true"] { color: var(--link); background: #eef5fb; border-color: #cfe0ee; text-decoration: none; }
+    .headline-block { position: relative; }
     a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
     section { padding: 2rem 0; border-top: 1px solid var(--line); }
     h2 { margin: 0 0 1rem; font-family: var(--heading-font); font-size: 1.25rem; letter-spacing: -0.02em; }
@@ -70,8 +67,6 @@
       .profile-picture { width: 100px; height: 100px; }
       .profile-block { justify-items: start; }
       .profile-links { max-width: 120px; justify-content: start; }
-      .headline-block { padding-right: 0; }
-      .headline-block .language-switch { position: static; margin: 0 0 0.75rem; padding-left: 0; }
       .collab-legend { justify-content: flex-start; text-align: left; }
       .collab-grid { grid-template-columns: 1fr; }
       .collab-detail { padding: 1rem; }
@@ -92,10 +87,6 @@
         </nav>
       </div>
       <div class="headline-block">
-          <span class="language-switch" aria-label="Language">
-            <a href="academia.html" aria-current="true">EN</a>
-            <a href="academia-pt.html">PT-BR</a>
-          </span>
         <h1>Barbara Fagundes, PhD</h1>
         <p class="subtitle">Learning Specialist in Tech, Engineering and Computing Education Research, AI adoption</p>
         <nav aria-label="Main navigation">
