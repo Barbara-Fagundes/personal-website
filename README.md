@@ -1,14 +1,16 @@
-# Barbara Fagundes Academic Profile
+# Bárbara Fagundes Academic Profile
 
 A simple GitHub Pages academic profile website.
 
 ## Files
 
 - `index.html` — homepage
+- `about.html` — about page
 - `industry.html` — industry-facing profile page
-- `publications.html` — selected publications
 - `instructional-design.html` — instructional design portfolio
-- `files/bfagundes_CV_June_2026.pdf` — CV
+- `beyond-cv.html` — personal narrative beyond the CV
+- `contact.html` — contact links
+- `files/bfagundes_CV.pdf` — CV
 - `assets/profile.jpg` — add a profile photo with this filename
 
 ## How to publish on GitHub Pages

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Bárbara Fagundes</title>
+  <meta name="description" content="About Bárbara Fagundes, learning scientist and LX specialist." />
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #171717;
+      --muted: #666;
+      --line: #e6e6e6;
+      --link: #235789;
+      --max: 760px;
+      --heading-font: Georgia, "Times New Roman", Times, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4rem 1.25rem;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .profile-block {
+      display: grid;
+      gap: 0.8rem;
+      justify-items: center;
+    }
+
+    .profile-picture {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: #eee;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.45rem;
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .profile-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.15rem;
+      height: 2.15rem;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--muted);
+      background: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .profile-links a:hover {
+      color: white;
+      background: var(--link);
+      border-color: var(--link);
+      text-decoration: none;
+    }
+
+    .profile-links .cv-button {
+      width: 2.7rem;
+      border-radius: 999px;
+      background: var(--link);
+      border-color: var(--link);
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        grid-template-columns: 120px 1fr;
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .profile-picture {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-block {
+        justify-items: start;
+      }
+
+      .profile-links {
+        max-width: 120px;
+        justify-content: start;
+      }
+
+      .headline-block {
+        padding-right: 0;
+      }
+
+      .headline-block .language-switch {
+        position: static;
+        margin: 0 0 0.75rem;
+        padding-left: 0;
+      }
+    }
+
+    h1 {
+      margin: 0 0 0.4rem;
+      font-family: var(--heading-font);
+      font-size: clamp(1.3rem, 3.8vw, 2.2rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      white-space: nowrap;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.4rem;
+      font-size: 0.95rem;
+    }
+
+    nav[aria-label="Main navigation"] a {
+      padding: 0.28rem 0.62rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+    }
+
+    nav[aria-label="Main navigation"] a[aria-current="page"] {
+      color: var(--link);
+      background: #eef5fb;
+      border-color: #cfe0ee;
+      text-decoration: none;
+    }
+
+    .headline-block {
+      position: relative;
+      padding-right: 7rem;
+    }
+
+    .headline-block .language-switch {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.18rem;
+      margin: 0;
+      padding-left: 0.6rem;
+    }
+
+    .headline-block .language-switch a {
+      padding: 0.36rem 0.55rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      line-height: 1;
+    }
+
+    .headline-block .language-switch a[aria-current="true"] {
+      color: var(--link);
+      background: #eef5fb;
+      border-color: #cfe0ee;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .headline-block {
+        padding-right: 0;
+      }
+
+      .headline-block .language-switch {
+        position: static;
+        margin: 0 0 0.75rem;
+        padding-left: 0;
+      }
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-family: var(--heading-font);
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .about-photo {
+      float: right;
+      width: min(42%, 280px);
+      margin: 0 0 1rem 1.5rem;
+    }
+
+    .about-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #eee;
+    }
+
+    @media (max-width: 600px) {
+      .about-photo {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.25rem;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.65rem;
+    }
+
+    .item-title {
+      font-weight: 700;
+    }
+
+    .meta {
+      color: var(--muted);
+    }
+
+    footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="profile-block">
+        <img class="profile-picture" src="assets/headshot.png" alt="Portrait of Bárbara Fagundes" />
+        <nav aria-label="Profile links" class="profile-links">
+          <a class="cv-button" href="files/bfagundes_CV.pdf" aria-label="CV" title="CV">CV</a>
+          <a href="mailto:iambarbaraf@gmail.com" aria-label="Email" title="Email"><img src="assets/icons8-email-50.png" alt="Email" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+          <a href="https://scholar.google.com/citations?user=XupPbTIAAAAJ&hl=en&oi=ao" aria-label="Google Scholar" title="Google Scholar"><img src="assets/Google_Scholar_logo.svg" alt="Google Scholar" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+          <a href="https://www.researchgate.net/profile/Barbara-Fagundes-2" aria-label="ResearchGate" title="ResearchGate"><img src="assets/researchgate-logo.svg" alt="ResearchGate" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+          <a href="https://www.linkedin.com/in/iambarbaraf" aria-label="LinkedIn" title="LinkedIn"><img src="assets/icons8-linkedin-50.png" alt="LinkedIn" style="width: 1em; height: 1em; vertical-align: middle;" /></a>
+        </nav>
+      </div>
+      <div class="headline-block">
+          <span class="language-switch" aria-label="Language">
+            <a href="about.html" aria-current="true">EN</a>
+            <a href="about-pt.html">PT-BR</a>
+          </span>
+        <h1>Barbara Fagundes, PhD</h1>
+        <p class="subtitle">Learning Specialist in Tech, Engineering and Computing Education Research, AI adoption</p>
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="academia.html">Academia</a>
+          <a href="industry.html">Industry</a>
+          <a href="instructional-design.html">Portfolio</a>
+          <a href="beyond-cv.html">Beyond the CV</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <figure class="about-photo">
+        <img src="assets/bfagundes_headshot.jpeg" alt="Bárbara Fagundes" />
+      </figure>
+
+      <p>
+        Bárbara Fagundes is a learning scientist and LX specialist with a background that spans early childhood education, computer science, and engineering education research. Originally from São Paulo, Brazil, she began her career as a K-5 teacher before making an unlikely leap into a Master's in Computer Science at Jackson State University, an HBCU in Mississippi where she taught herself core CS subjects, navigated graduate school in a second language, and deepened her commitment to equity and inclusion in education. The first in her family to earn a college degree and a Ph.D., Bárbara's path into academia was neither linear nor guaranteed, and that experience shapes both the questions she asks as a researcher and the educator she has become.
+      </p>
+
+      <p>
+        That path led her to Purdue University, where she earned a Ph.D. in Engineering Education and built a research program focused on a question she has carried since the classroom: how do we design learning environments that actually work, not just for students who already fit the mold, but for everyone? Her work spans early computational thinking in K-2 settings, undergraduate STEM engagement and persistence, and the responsible integration of generative AI in computing and engineering courses.
+      </p>
+
+      <p>
+         Bárbara brings an unusual combination to this work. She has the practitioner instincts of a former teacher, the analytical rigor of a researcher, and the technical foundation of a computer scientist. She is most energized when research connects directly to practice, when findings shape how courses are designed, how instructors teach, and how learners grow.
+      </p>
+    </section>
+
+    <section>
+      <h2>Scope of work</h2>
+      <p>
+        Bárbara's work sits at the intersection of learning science, computing education, and emerging technology. She studies how young children develop computational thinking in K-2 settings, how students engage with engineering design across K-12, and how undergraduates experience autonomy and motivation in STEM courses through the lens of Self-Determination Theory. Her current work also examines how undergraduate students adopt and ethically use generative AI in computer science and engineering courses, with attention to learning processes, responsible use, and instructional implications. Across these areas, Bárbara translates research findings into practical instructional guidance, curriculum design, and learning experiences that are measurable, scalable, and built to work for every learner.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <span class="item-title">Ph.D. in Engineering Education.</span>
+          <span class="meta">Purdue University, Winter 2024. Advisor: Dr. Tamara J. Moore.</span>
+        </li>
+        <li>
+          <span class="item-title">M.S. in Computer Science.</span>
+          <span class="meta">Jackson State University, Spring 2017.</span>
+        </li>
+        <li>
+          <span class="item-title">B.A. in Early Childhood Education.</span>
+          <span class="meta">Universidade Sant’Anna (São Paulo/BR), Summer 2010. Minors: K-5 education, policy, and school administration.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Research and projects</h2>
+      <ul>
+        <li>
+          <span class="item-title">Generative AI in undergraduate computing and engineering courses.</span>
+          Qualitative research on students’ responsible use of AI tools, learning processes, ethical considerations, tool limitations, and instructional implications.
+        </li>
+        <li>
+          <span class="item-title">Student Pedagogy Advocates.</span>
+          Student-faculty partnership work supporting evidence-based teaching, undergraduate mentoring, and research-to-practice initiatives.
+        </li>
+        <li>
+          <span class="item-title">Rethinking Circle Time.</span>
+          NSF-funded research integrating computational thinking into K-2 literacy through programming lessons, classroom video analysis, teacher-facing materials, and survey design.
+        </li>
+        <li>
+          <span class="item-title">Pre-college engineering education research.</span>
+          Classroom-based video data collection, curriculum implementation support, and analysis of engineering design learning in K-12 settings.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Teaching and instructional design</h2>
+      <ul>
+        <li>
+          <span class="item-title">Teaching Engineering Online.</span>
+          Co-developed graduate course modules, scripts, and instructional slides for online and blended engineering education.
+        </li>
+        <li>
+          <span class="item-title">CISTAR NSF Engineering Research Center.</span>
+          Designed e-learning modules, video-based instructional supports, teacher-facing lessons, and middle school engineering curriculum materials.
+        </li>
+        <li>
+          <span class="item-title">First-Year Engineering Courses.</span>
+          Supported required Purdue engineering courses serving approximately 240 students per semester; mentored student teams, supported Excel and MATLAB work, and gave feedback on technical communication.
+        </li>
+        <li>
+          <span class="item-title">Early childhood and elementary teaching.</span>
+          Designed and delivered interdisciplinary lessons in literacy, mathematics, science, geography, and history in public and private schools in São Paulo, Brazil.
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Bárbara Fagundes. Hosted on GitHub Pages.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
